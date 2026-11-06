@@ -1,5 +1,9 @@
 import axios from "axios";
-import type { MovieResponse } from "../types/movie";
+import type { Movie } from "../types/movie";
+export interface MovieResponse {
+  results: Movie[];
+  total_pages: number;
+}
 
 export async function fetchMovies(
   query: string,
